@@ -11,12 +11,12 @@ import static javax.swing.JOptionPane.showMessageDialog;
  *
  * @author dokxo
  */
-public class Autenticación extends javax.swing.JFrame {
+public class LoginView extends javax.swing.JFrame {
 
     /**
      * Creates new form LoginView
      */
-    public Autenticación() {
+    public LoginView () {
         initComponents();
         this.setLocationRelativeTo(null);
         UserTxt.requestFocus();
@@ -191,7 +191,7 @@ public class Autenticación extends javax.swing.JFrame {
     }//GEN-LAST:event_UserTxtActionPerformed
 
     private void ForgotBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ForgotBtnMouseClicked
-        RestablecerContraseña rv = new RestablecerContraseña();
+        ResetPassView rv = new ResetPassView();
         rv.setVisible(true);
         this.setVisible(false);
                 
@@ -218,13 +218,13 @@ public class Autenticación extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Autenticación.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger( LoginView .class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Autenticación.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger( LoginView .class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Autenticación.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginView .class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Autenticación.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger( LoginView .class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -232,7 +232,7 @@ public class Autenticación extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Autenticación().setVisible(true);
+                new LoginView().setVisible(true);
             }
         });
     }

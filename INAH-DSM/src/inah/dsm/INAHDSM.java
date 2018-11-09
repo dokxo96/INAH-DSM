@@ -16,7 +16,7 @@ public class INAHDSM {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Autenticación lg = new Autenticación();
+        LoginView  lg = new  LoginView ();
         lg.setVisible(true);
     }
     
