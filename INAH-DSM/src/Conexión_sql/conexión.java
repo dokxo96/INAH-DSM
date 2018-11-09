@@ -21,7 +21,7 @@ public class conexión {
         try{
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             System.out.println("Driver Registrado");
-            cn=DriverManager.getConnection(url+bd,"sa","123"); // usuario y contraseña 
+            cn=DriverManager.getConnection(url+bd,"sa","123"); // usuario y contraseña usuario: sa  contraseña:123
             System.out.println("Conexion Establecida");
             st= cn.createStatement();
             
