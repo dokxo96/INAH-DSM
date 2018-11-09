@@ -179,8 +179,8 @@ public class Autenticación extends javax.swing.JFrame {
         }
         else
         {
-            Ventanaprincipal mv = new Ventanaprincipal();
-            mv.setVisible(true);
+          //  Ventanaprincipal mv = new Ventanaprincipal();
+//            mv.setVisible(true);
             this.dispose();
         }
         // TODO add your handling code here:
