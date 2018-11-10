@@ -16,6 +16,8 @@ public class INAHDSM {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        LoginView lg = new LoginView();
+        lg.setVisible(true);
     }
     
 }
