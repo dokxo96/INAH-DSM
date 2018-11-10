@@ -179,7 +179,7 @@ public class LoginView extends javax.swing.JFrame {
         }
         else
         {
-            Ventanaprincipal mv = new Ventanaprincipal();
+            MainView mv = new MainView();
             mv.setVisible(true);
             this.dispose();
         }
