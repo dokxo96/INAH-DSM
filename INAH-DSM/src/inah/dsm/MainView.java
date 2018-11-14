@@ -40,7 +40,10 @@ public class MainView extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
 >>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -175,6 +178,9 @@ public class MainView extends javax.swing.JFrame {
 
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 
         jLabel15.setText("Reunion");
 
@@ -190,6 +196,7 @@ public class MainView extends javax.swing.JFrame {
         jLabel16.setText("Requisitos");
 
         jCheckBox3.setText("jCheckBox3");
+<<<<<<< HEAD
 
         jCheckBox4.setText("jCheckBox4");
 
@@ -217,6 +224,15 @@ public class MainView extends javax.swing.JFrame {
 
         jCheckBox6.setText("jCheckBox6");
 
+=======
+
+        jCheckBox4.setText("jCheckBox4");
+
+        jCheckBox5.setText("jCheckBox5");
+
+        jCheckBox6.setText("jCheckBox6");
+
+>>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
         jCheckBox7.setText("jCheckBox7");
 
         jCheckBox8.setText("jCheckBox8");
@@ -237,6 +253,7 @@ public class MainView extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     .addComponent(jLabel12)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel4Layout.createSequentialGroup()
@@ -249,6 +266,8 @@ public class MainView extends javax.swing.JFrame {
                             .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(794, Short.MAX_VALUE))
 =======
+=======
+>>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
 >>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
                     .addGroup(jPanel4Layout.createSequentialGroup()
@@ -323,6 +342,9 @@ public class MainView extends javax.swing.JFrame {
                 .addComponent(jLabel16)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
+=======
 >>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
 >>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
@@ -825,7 +847,10 @@ public class MainView extends javax.swing.JFrame {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
 >>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
@@ -833,6 +858,9 @@ public class MainView extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField5ActionPerformed
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
+=======
 >>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
 >>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
@@ -842,9 +870,15 @@ public class MainView extends javax.swing.JFrame {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+=======
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
+>>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         // TODO add your handling code here:
@@ -895,9 +929,12 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JLabel NombreLbl;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
 =======
+=======
+>>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
 >>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
     private javax.swing.ButtonGroup buttonGroup1;
@@ -915,6 +952,9 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
+=======
 >>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
 >>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
@@ -924,6 +964,10 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox4;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    private com.toedter.calendar.JDateChooser jDateChooser1;
+>>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
     private com.toedter.calendar.JDateChooser jDateChooser1;
 >>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
@@ -940,9 +984,12 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+=======
+>>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
 >>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
@@ -976,10 +1023,15 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+=======
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextArea jTextArea1;
+>>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
@@ -996,7 +1048,10 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private javax.swing.JTextField jTextField7;
+=======
+>>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
 >>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
