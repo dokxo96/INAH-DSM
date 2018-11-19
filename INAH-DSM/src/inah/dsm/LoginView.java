@@ -177,8 +177,8 @@ public class LoginView extends javax.swing.JFrame {
         }
         else
         {
-            MainView mv = new MainView();
-            mv.setVisible(true);
+           // MainView mv = new MainView();
+            //mv.setVisible(true);
             this.dispose();
         }
         // TODO add your handling code here:
