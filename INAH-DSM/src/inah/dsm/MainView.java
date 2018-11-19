@@ -38,6 +38,7 @@ public class MainView extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         jLabel12 = new javax.swing.JLabel();
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,6 +56,8 @@ public class MainView extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 =======
 >>>>>>> parent of ea45002... MainView
+=======
+>>>>>>> parent of 0721810... Tramite
 =======
 >>>>>>> parent of 0721810... Tramite
         jLabel11 = new javax.swing.JLabel();
@@ -111,6 +114,7 @@ public class MainView extends javax.swing.JFrame {
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         jLabel10.setText("Solicitante");
@@ -198,9 +202,13 @@ public class MainView extends javax.swing.JFrame {
 
 <<<<<<< HEAD
 =======
+=======
+        jLabel10.setText("jLabel10");
+>>>>>>> parent of 0721810... Tramite
 
-        jCheckBox4.setText("jCheckBox4");
+        jLabel11.setText("jLabel11");
 
+<<<<<<< HEAD
         jCheckBox5.setText("jCheckBox5");
 
         jCheckBox6.setText("jCheckBox6");
@@ -223,6 +231,9 @@ public class MainView extends javax.swing.JFrame {
 =======
         jLabel12.setText("jLabel12");
 >>>>>>> parent of 0721810... Tramite
+=======
+        jLabel12.setText("jLabel12");
+>>>>>>> parent of 0721810... Tramite
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -236,8 +247,11 @@ public class MainView extends javax.swing.JFrame {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of ea45002... MainView
+=======
+>>>>>>> parent of 0721810... Tramite
 =======
 >>>>>>> parent of 0721810... Tramite
                     .addComponent(jLabel12)
@@ -250,6 +264,7 @@ public class MainView extends javax.swing.JFrame {
                             .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))))
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 .addContainerGap(794, Short.MAX_VALUE))
@@ -339,6 +354,9 @@ public class MainView extends javax.swing.JFrame {
 =======
                 .addContainerGap(785, Short.MAX_VALUE))
 >>>>>>> parent of ea45002... MainView
+=======
+                .addContainerGap(785, Short.MAX_VALUE))
+>>>>>>> parent of 0721810... Tramite
 =======
                 .addContainerGap(785, Short.MAX_VALUE))
 >>>>>>> parent of 0721810... Tramite
@@ -582,6 +600,7 @@ public class MainView extends javax.swing.JFrame {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
@@ -611,6 +630,8 @@ public class MainView extends javax.swing.JFrame {
 
 =======
 >>>>>>> parent of ea45002... MainView
+=======
+>>>>>>> parent of 0721810... Tramite
 =======
 >>>>>>> parent of 0721810... Tramite
     /**
@@ -650,6 +671,7 @@ public class MainView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel NombreLbl;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -709,10 +731,16 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
 >>>>>>> parent of 0721810... Tramite
+=======
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+>>>>>>> parent of 0721810... Tramite
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     private javax.swing.JLabel jLabel13;
@@ -735,6 +763,8 @@ public class MainView extends javax.swing.JFrame {
 >>>>>>> parent of ea45002... MainView
 =======
 >>>>>>> parent of 0721810... Tramite
+=======
+>>>>>>> parent of 0721810... Tramite
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -754,6 +784,7 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JScrollPane jScrollPane1;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     private javax.swing.JScrollPane jScrollPane2;
@@ -782,10 +813,14 @@ public class MainView extends javax.swing.JFrame {
 =======
     private javax.swing.JTabbedPane jTabbedPane1;
 >>>>>>> parent of 0721810... Tramite
+=======
+    private javax.swing.JTabbedPane jTabbedPane1;
+>>>>>>> parent of 0721810... Tramite
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     private javax.swing.JTextField jTextField5;
@@ -802,6 +837,8 @@ public class MainView extends javax.swing.JFrame {
 >>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
 =======
 >>>>>>> parent of ea45002... MainView
+=======
+>>>>>>> parent of 0721810... Tramite
 =======
 >>>>>>> parent of 0721810... Tramite
     // End of variables declaration//GEN-END:variables
