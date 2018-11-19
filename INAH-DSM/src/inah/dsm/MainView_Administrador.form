@@ -532,6 +532,9 @@
                           <Image iconType="3" name="/Images/person-add_icon-icons.com_50077 (1).png"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnAgregarMouseClicked"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="btnCancelar">
                       <Properties>

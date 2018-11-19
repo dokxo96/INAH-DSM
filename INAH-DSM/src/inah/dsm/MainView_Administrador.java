@@ -5,6 +5,14 @@
  */
 package inah.dsm;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author dokxo
@@ -190,6 +198,11 @@ public class MainView_Administrador extends javax.swing.JFrame {
         jScrollPane1.setViewportView(listMunicipio);
 
         btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/person-add_icon-icons.com_50077 (1).png"))); // NOI18N
+        btnAgregar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAgregarMouseClicked(evt);
+            }
+        });
 
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/cancelform_85913.png"))); // NOI18N
 
@@ -409,6 +422,90 @@ public class MainView_Administrador extends javax.swing.JFrame {
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         this.dispose();
     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void btnAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarMouseClicked
+        String nom = txtNombre.getText();
+            String ap = txtAP.getText();
+            String am = txtAM.getText();
+            String area = ItemArea.getSelectedItem().toString();
+        //    String correo = txtCorreo.getText();
+            String usuario = txtUsuario.getText();
+            String contra = txtContraseña.getText();
+            int id_p=0,id_area=0;
+            char tU;
+            String apellidos= ap+""+am;
+            if(ItemTipoU.getSelectedItem().toString().equals("Operador") ){
+                tU='O';
+            }
+            if(ItemTipoU.getSelectedItem().toString().equals("Administrador") ){
+                tU='A';
+            }
+            if(ItemTipoU.getSelectedItem().toString().equals("Delegado") ){
+                tU='D';
+            }
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            String conecctionUrl = "jdbc:sqlserver://sa:1433;databaseName=BD_INAH";
+            Connection cn = null;
+        try {
+            cn = DriverManager.getConnection(conecctionUrl, "sa", "12345");
+        } catch (SQLException ex) {
+            Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            Statement sentencia = null;
+        try {
+            sentencia = cn.createStatement();
+        } catch (SQLException ex) {
+            Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            ResultSet r = null;
+        try {
+            r = sentencia.executeQuery("select id_persona from persona where nombres='"+nom+"'");
+        } catch (SQLException ex) {
+            Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            if (r!=null){
+                try {
+                    while(r.next())
+                        id_p = r.getInt("id_persona");
+                } catch (SQLException ex) {
+                    Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            String sql2 = "INSERT INTO area VALUES ('"+area+"')";
+            
+               ResultSet r2 = null;
+        try {
+            r2 = sentencia.executeQuery("select id_area from area where nombre_area='"+area+"'");
+        } catch (SQLException ex) {
+            Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            if (r2!=null){
+                try {
+                    while(r2.next())
+                        id_area = r.getInt("id_area");
+                } catch (SQLException ex) {
+                    Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            String correo="123";
+            String sql = "INSERT INTO persona VALUES ('"+nom+"','"+apellidos+"','"+correo+"',"+id_area+"')";
+            String sql1 = "INSERT INTO usuarios VALUES ('"+usuario+"','"+contra+"','"+am+"',"+id_p+")";
+                try {
+                    sentencia.executeUpdate(sql);
+                } catch (SQLException ex) {
+                    Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                try {
+                    int executeUpdate = sentencia.executeUpdate(sql1);
+                } catch (SQLException ex) {
+                    Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    }//GEN-LAST:event_btnAgregarMouseClicked
 
     /**
      * @param args the command line arguments
