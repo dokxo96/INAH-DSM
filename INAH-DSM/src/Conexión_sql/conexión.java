@@ -14,7 +14,7 @@ public class conexión {
     protected Statement st;
     protected String sql;
     protected ResultSet rs;
-    protected final String url ="jdbc:sqlserver://localhost:1433;databaseName="; //Aqui se pone el nombre de el servidor de tu bd y el nombre de la bd
+    protected final String url ="jdbc:sqlserver://localhost:1433;databaseName=BD_INAH"; //Aqui se pone el nombre de el servidor de tu bd y el nombre de la bd
 
     public conexión(String bd){
                     System.out.println("aqui");

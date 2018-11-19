@@ -205,6 +205,11 @@ public class MainView_Administrador extends javax.swing.JFrame {
         });
 
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/cancelform_85913.png"))); // NOI18N
+        btnCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCancelarMouseClicked(evt);
+            }
+        });
 
         jLabel11.setText("Correo:");
 
@@ -506,6 +511,10 @@ public class MainView_Administrador extends javax.swing.JFrame {
                     Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
                 }
     }//GEN-LAST:event_btnAgregarMouseClicked
+
+    private void btnCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarMouseClicked
+      
+    }//GEN-LAST:event_btnCancelarMouseClicked
 
     /**
      * @param args the command line arguments
