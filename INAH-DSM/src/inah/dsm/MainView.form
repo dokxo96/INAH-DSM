@@ -171,9 +171,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="297" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="297" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -219,10 +217,7 @@
                                                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                                                   <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
                                               </Group>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
+
                                           </Group>
                                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                       </Group>
@@ -244,7 +239,7 @@
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Component id="jCheckBox2" min="-2" pref="60" max="-2" attributes="0"/>
                                               </Group>
-<<<<<<< HEAD
+
                                           </Group>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
@@ -254,14 +249,14 @@
                                               <Component id="jCheckBox7" min="-2" max="-2" attributes="0"/>
                                               <Component id="jButton1" min="-2" pref="100" max="-2" attributes="0"/>
                                               <Component id="jCheckBox8" alignment="1" min="-2" max="-2" attributes="0"/>
-=======
+
                                       <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Group type="102" attributes="0">
                                               <Component id="jLabel10" min="-2" pref="56" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="jLabel11" max="32767" attributes="0"/>
->>>>>>> parent of 0721810... Tramite
+
                                           </Group>
                                           <Group type="102" attributes="0">
                                               <Component id="jLabel9" min="-2" pref="66" max="-2" attributes="0"/>
@@ -270,11 +265,10 @@
                                           </Group>
                                       </Group>
                                   </Group>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                                   <EmptySpace pref="794" max="32767" attributes="0"/>
-=======
-=======
+
+
                                           </Group>
                                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                       </Group>
@@ -305,17 +299,14 @@
                                               <Component id="jCheckBox7" min="-2" max="-2" attributes="0"/>
                                               <Component id="jButton1" min="-2" pref="100" max="-2" attributes="0"/>
                                               <Component id="jCheckBox8" alignment="1" min="-2" max="-2" attributes="0"/>
-=======
-=======
->>>>>>> parent of 0721810... Tramite
+
                                       <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Group type="102" attributes="0">
                                               <Component id="jLabel10" min="-2" pref="56" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="jLabel11" max="32767" attributes="0"/>
-<<<<<<< HEAD
->>>>>>> parent of ea45002... MainView
+
                                           </Group>
                                           <Group type="102" attributes="0">
                                               <Component id="jLabel9" min="-2" pref="66" max="-2" attributes="0"/>
@@ -324,9 +315,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-<<<<<<< HEAD
->>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
-=======
+
                                           </Group>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
@@ -336,8 +325,7 @@
                                               <Component id="jCheckBox7" min="-2" max="-2" attributes="0"/>
                                               <Component id="jButton1" min="-2" pref="100" max="-2" attributes="0"/>
                                               <Component id="jCheckBox8" alignment="1" min="-2" max="-2" attributes="0"/>
-=======
->>>>>>> parent of 0721810... Tramite
+
                                           </Group>
                                           <Group type="102" attributes="0">
                                               <Component id="jLabel9" min="-2" pref="66" max="-2" attributes="0"/>
@@ -346,29 +334,19 @@
                                           </Group>
                                       </Group>
                                   </Group>
-<<<<<<< HEAD
->>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
+
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="631" max="-2" attributes="0"/>
                                   <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
-=======
->>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
-=======
->>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
-=======
+
                                   <EmptySpace pref="785" max="32767" attributes="0"/>
->>>>>>> parent of ea45002... MainView
-=======
+
                                   <EmptySpace pref="785" max="32767" attributes="0"/>
->>>>>>> parent of 0721810... Tramite
-=======
+
                                   <EmptySpace pref="785" max="32767" attributes="0"/>
->>>>>>> parent of 0721810... Tramite
+
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -376,21 +354,21 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-<<<<<<< HEAD
+
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel9" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                                       <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-=======
+
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel9" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                                       <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
->>>>>>> parent of 0721810... Tramite
+
                                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -430,11 +408,10 @@
                         <Component class="javax.swing.JLabel" name="jLabel11">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="jLabel11"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                           </Properties>
                         </Component>
-<<<<<<< HEAD
+
                         <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel14">
@@ -496,7 +473,7 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JCheckBox" name="jCheckBox6">
-<<<<<<< HEAD
+
                           <Properties>
                             <Property name="text" type="java.lang.String" value="jCheckBox6"/>
                           </Properties>
@@ -507,7 +484,7 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JCheckBox" name="jCheckBox8">
-<<<<<<< HEAD
+
                           <Properties>
                             <Property name="text" type="java.lang.String" value="jCheckBox8"/>
                           </Properties>
@@ -529,7 +506,7 @@
                         </Component>
                         <Component class="javax.swing.JCheckBox" name="jCheckBox12">
                           <Properties>
-=======
+
                           <Properties>
                             <Property name="text" type="java.lang.String" value="jCheckBox8"/>
                           </Properties>
@@ -551,8 +528,7 @@
                         </Component>
                         <Component class="javax.swing.JCheckBox" name="jCheckBox12">
                           <Properties>
->>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
-=======
+
                           <Properties>
                             <Property name="text" type="java.lang.String" value="jCheckBox6"/>
                           </Properties>
@@ -584,27 +560,25 @@
                         </Component>
                         <Component class="javax.swing.JCheckBox" name="jCheckBox12">
                           <Properties>
->>>>>>> 0721810f1ffdf353b78c464f065811fe192932d1
+
                             <Property name="text" type="java.lang.String" value="jCheckBox12"/>
-=======
+
                         <Component class="javax.swing.JLabel" name="jLabel12">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="jLabel12"/>
->>>>>>> parent of ea45002... MainView
-=======
+
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel12">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="jLabel12"/>
->>>>>>> parent of 0721810... Tramite
-=======
+
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel12">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="jLabel12"/>
->>>>>>> parent of 0721810... Tramite
+
                           </Properties>
                         </Component>
                       </SubComponents>
