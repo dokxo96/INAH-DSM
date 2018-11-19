@@ -12,6 +12,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import static javax.swing.JOptionPane.showMessageDialog;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -69,7 +71,7 @@ public class MainView_Administrador extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        tableData = new javax.swing.JTable();
+        tblUsuarios = new javax.swing.JTable();
         btnModificar = new javax.swing.JLabel();
         btnEliminar = new javax.swing.JLabel();
 
@@ -184,11 +186,15 @@ public class MainView_Administrador extends javax.swing.JFrame {
 
         jLabel6.setText("USUARIO:");
 
-        ItemTipoU.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Operador", "Trabajador" }));
+        ItemTipoU.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Tipo", "Administrador", "Operador", "Trabajador" }));
 
-        ItemArea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Restauracion", "Monumentos", "Reparacion" }));
+        ItemArea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione area", "Restauracion", "Monumentos", "Reparacion" }));
 
-        txtUsuario.setText("txtUsuario");
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioActionPerformed(evt);
+            }
+        });
 
         listMunicipio.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Santiago", "Tepic", "Compostela", "Tuxpan", "Acaponeta", "La yesca", "El nayar", "Guayabitos", "Sayulita" };
@@ -197,7 +203,7 @@ public class MainView_Administrador extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(listMunicipio);
 
-        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/person-add_icon-icons.com_50077 (1).png"))); // NOI18N
+        btnAgregar.setText("AGREGAR");
         btnAgregar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnAgregarMouseClicked(evt);
@@ -306,7 +312,7 @@ public class MainView_Administrador extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        tableData.setModel(new javax.swing.table.DefaultTableModel(
+        tblUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null},
@@ -323,7 +329,7 @@ public class MainView_Administrador extends javax.swing.JFrame {
                 "Nombre", "Apellido Paterno", "Apellido Materno", "Tipo de Usuario", "Area", "Usuario", "Contraseña", "Municipio   ", "Correo"
             }
         ));
-        jScrollPane3.setViewportView(tableData);
+        jScrollPane3.setViewportView(tblUsuarios);
 
         btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/edit_modify_icon-icons.com_49882.png"))); // NOI18N
 
@@ -424,11 +430,11 @@ public class MainView_Administrador extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void btnAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarMouseClicked
-        String nom = txtNombre.getText();
+            String nom = txtNombre.getText();
             String ap = txtAP.getText();
             String am = txtAM.getText();
             String area = ItemArea.getSelectedItem().toString();
-        //    String correo = txtCorreo.getText();
+            String correo = txtCorreo.getText();
             String usuario = txtUsuario.getText();
             String contra = txtContraseña.getText();
             int id_p=0,id_area=0;
@@ -448,10 +454,10 @@ public class MainView_Administrador extends javax.swing.JFrame {
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
         }
-            String conecctionUrl = "jdbc:sqlserver://sa:1433;databaseName=BD_INAH";
+            String conecctionUrl = "jdbc:sqlserver://localhost:1433;databaseName=BD_INAH"; 
             Connection cn = null;
         try {
-            cn = DriverManager.getConnection(conecctionUrl, "sa", "12345");
+            cn = DriverManager.getConnection(conecctionUrl, "sa", "123");
         } catch (SQLException ex) {
             Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -476,7 +482,6 @@ public class MainView_Administrador extends javax.swing.JFrame {
                     Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-            String sql2 = "INSERT INTO area VALUES ('"+area+"')";
             
                ResultSet r2 = null;
         try {
@@ -487,26 +492,69 @@ public class MainView_Administrador extends javax.swing.JFrame {
             if (r2!=null){
                 try {
                     while(r2.next())
-                        id_area = r.getInt("id_area");
+                        id_area = r2.getInt("id_area");
                 } catch (SQLException ex) {
                     Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-            String correo="123";
-            String sql = "INSERT INTO persona VALUES ('"+nom+"','"+apellidos+"','"+correo+"',"+id_area+"')";
-            String sql1 = "INSERT INTO usuarios VALUES ('"+usuario+"','"+contra+"','"+am+"',"+id_p+")";
+            String sql = "INSERT INTO persona VALUES ('"+nom+"','"+apellidos+"','"+correo+"',"+id_area+")";
+            String sql1 = "INSERT INTO usuarios VALUES ('"+usuario+"','"+contra+"',"+id_p+")";
                 try {
-                    sentencia.executeUpdate(sql);
+                sentencia.executeUpdate(sql);
                 } catch (SQLException ex) {
                     Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 try {
-                    int executeUpdate = sentencia.executeUpdate(sql1);
+                sentencia.executeUpdate(sql1);
                 } catch (SQLException ex) {
                     Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
                 }
+               
+       showMessageDialog(null,"Usuario Agregado");
+       txtNombre.setText("null");
+       txtContraseña.setText("null");
+       txtAP.setText("null");
+       txtAM.setText("null");
+       txtUsuario.setText("null");
     }//GEN-LAST:event_btnAgregarMouseClicked
 
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsuarioActionPerformed
+
+    //Listar Usuarios en tabla
+    
+    public void listarUsuarios()
+    {
+        String sql="SELECT * FROM usuarios";
+        String sql1="SELECT * FROM  persona";
+        String sql2="SELECT * FROM  area";
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            String conecctionUrl = "jdbc:sqlserver://localhost:1433;databaseName=BD_INAH";
+            Connection cn = DriverManager.getConnection(conecctionUrl, "sa", "123");
+            Statement sentencia = cn.createStatement();
+            ResultSet rs = sentencia.executeQuery(sql);
+            ResultSet rs2 = sentencia.executeQuery(sql1);
+            ResultSet rs3 = sentencia.executeQuery(sql2);
+            DefaultTableModel m1=(DefaultTableModel)tblUsuarios.getModel();
+            m1.setRowCount(0);
+            while (rs2.next()) {
+                Object []fila={rs.getString(2),rs.getString(3),rs3.getString(5), rs2.getString(2), rs2.getString(3), rs.getString(4)};
+                m1.addRow(fila);
+                
+            }
+        }catch (ClassNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -537,6 +585,7 @@ public class MainView_Administrador extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new MainView_Administrador().setVisible(true);
             }
@@ -574,7 +623,7 @@ public class MainView_Administrador extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JList<String> listMunicipio;
-    private javax.swing.JTable tableData;
+    private javax.swing.JTable tblUsuarios;
     private javax.swing.JTextField txtAM;
     private javax.swing.JTextField txtAP;
     private javax.swing.JPasswordField txtContraseña;
