@@ -122,6 +122,7 @@ public boolean entrar(String usuario,String contrasena) throws Exception{
                     while (resultados.next()) {
                         user = resultados.getString("NOMBRE_USUARIO");
                         pass = resultados.getString("CONTRASENA");
+                            System.out.println(user+" "+pass);
                         if(usuario.equals(user)&&contrasena.equals(pass)){
                             System.out.println("usuario correcto");
                             tipo=resultados.getString("TIPO_PERSONA");
@@ -135,11 +136,10 @@ public boolean entrar(String usuario,String contrasena) throws Exception{
             break;
                             }//switch
                             return true;
-                         }
-                        else
-                        conexion.close();   
+                         }   
                         }//while
                     
+                        conexion.close();
                     return false;
                 }//if resultados != null
                 else
