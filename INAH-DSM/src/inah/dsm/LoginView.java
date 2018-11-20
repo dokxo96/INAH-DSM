@@ -173,7 +173,9 @@ Usuario u = new Usuario();
     try {
         String Estado;
         u.setNombre(UserTxt.getText());
+        
         bd.entrar(UserTxt.getText(),PassTxt.getText());
+        this.setVisible(false);
     } catch (Exception ex) {
         Logger.getLogger(LoginView.class.getName()).log(Level.SEVERE, null, ex);
     }

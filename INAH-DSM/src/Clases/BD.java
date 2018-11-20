@@ -126,18 +126,21 @@ public boolean entrar(String usuario,String contrasena) throws Exception{
                             System.out.println("usuario correcto");
                             tipo=resultados.getString("TIPO_PERSONA");
                             System.out.println(tipo);
+                            
                             switch(tipo){
-            case "ADMINISTRADOR": new inah.dsm.MainView_Administrador().setVisible(true);
+            case "A": new inah.dsm.MainView_Administrador().setVisible(true);
             break;
-            case "OPERADOR": new inah.dsm.MainView_operador().setVisible(true);
+            case "O": new inah.dsm.MainView_operador().setVisible(true);
             break;
-            case "DELEGADO": new inah.dsm.MainView_Delegado().setVisible(true);
+            case "D": new inah.dsm.MainView_Delegado().setVisible(true);
             break;
                             }//switch
                             return true;
                          }
                         else
                         conexion.close();   
+                        showMessageDialog(null,"Usuario o Contraseña incorrecta");
+                        
                         }//while
                     
                     return false;
@@ -156,9 +159,11 @@ public boolean entrar(String usuario,String contrasena) throws Exception{
         }
        comando.close();
         return false;
+   
     }
 public void cerrar() throws SQLException{
         try {
+            showMessageDialog(null,"METODO CERRR");
             conexion.close();
         } catch (SQLException e) {
             e.printStackTrace();

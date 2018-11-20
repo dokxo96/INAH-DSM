@@ -21,11 +21,14 @@ import javax.swing.table.DefaultTableModel;
  */
 public class MainView_Administrador extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MainView
-     */
-    public MainView_Administrador() {
+  
+    public MainView_Administrador() throws SQLException{
         initComponents();
+        try {
+            listarUsuarios();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -186,9 +189,14 @@ public class MainView_Administrador extends javax.swing.JFrame {
 
         jLabel6.setText("USUARIO:");
 
-        ItemTipoU.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Tipo", "Administrador", "Operador", "Trabajador" }));
+        ItemTipoU.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE TIPO", "ADMINSTRADOR", "OPERADOR", "TRABAJADOR" }));
+        ItemTipoU.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemTipoUActionPerformed(evt);
+            }
+        });
 
-        ItemArea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione area", "Restauracion", "Monumentos", "Reparacion" }));
+        ItemArea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE AREA", "MONUMENTOS HISTÓRICOS", "ARQUEOLOGÍA", "CONSERVACIÓN", "JUNTAS VECINALES" }));
 
         txtUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,21 +211,20 @@ public class MainView_Administrador extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(listMunicipio);
 
-        btnAgregar.setText("AGREGAR");
         btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/mas.png"))); // NOI18N
+        btnAgregar.setText("AGREGAR");
         btnAgregar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnAgregarMouseClicked(evt);
             }
         });
 
-        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/cancelform_85913.png"))); // NOI18N
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/menos.png"))); // NOI18N
         btnCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnCancelarMouseClicked(evt);
             }
         });
-        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/menos.png"))); // NOI18N
 
         jLabel11.setText("Correo:");
 
@@ -252,7 +259,7 @@ public class MainView_Administrador extends javax.swing.JFrame {
                             .addComponent(txtCorreo)
                             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(ItemArea, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(ItemTipoU, 0, 132, Short.MAX_VALUE))
+                                .addComponent(ItemTipoU, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(txtAM, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addGap(1, 1, 1)
@@ -319,19 +326,19 @@ public class MainView_Administrador extends javax.swing.JFrame {
 
         tblUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Nombre", "Apellido Paterno", "Apellido Materno", "Tipo de Usuario", "Area", "Usuario", "Contraseña", "Municipio   ", "Correo"
+                "Nombres  ", "Apellidos", "Tipo de Usuario", "Area", "Usuario", "Contraseña", "Municipio   ", "Correo"
             }
         ));
         jScrollPane3.setViewportView(tblUsuarios);
@@ -374,7 +381,7 @@ public class MainView_Administrador extends javax.swing.JFrame {
                 .addGroup(REGISTROLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(261, Short.MAX_VALUE))
+                .addContainerGap(182, Short.MAX_VALUE))
         );
         REGISTROLayout.setVerticalGroup(
             REGISTROLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -445,13 +452,13 @@ public class MainView_Administrador extends javax.swing.JFrame {
             int id_p=0,id_area=0;
             char tU;
             String apellidos= ap+""+am;
-            if(ItemTipoU.getSelectedItem().toString().equals("Operador") ){
+            if(ItemTipoU.getSelectedItem().toString().equals("OPERADOR") ){
                 tU='O';
             }
-            if(ItemTipoU.getSelectedItem().toString().equals("Administrador") ){
+            if(ItemTipoU.getSelectedItem().toString().equals("ADMINISTRADOR") ){
                 tU='A';
             }
-            if(ItemTipoU.getSelectedItem().toString().equals("Delegado") ){
+            if(ItemTipoU.getSelectedItem().toString().equals("DELEGADO") ){
                 tU='D';
             }
         try {
@@ -502,18 +509,14 @@ public class MainView_Administrador extends javax.swing.JFrame {
                     Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-            String sql = "INSERT INTO persona VALUES ('"+nom+"','"+apellidos+"','"+correo+"',"+id_area+")";
-            String sql1 = "INSERT INTO usuarios VALUES ('"+usuario+"','"+contra+"',"+id_p+")";
+            String sql = "INSERT INTO persona VALUES ('"+nom+"','"+apellidos+"','"+correo+"',"+id_area+",'"+usuario+"','"+contra+"',"+id_p+")";
+            
                 try {
                 sentencia.executeUpdate(sql);
                 } catch (SQLException ex) {
                     Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                try {
-                sentencia.executeUpdate(sql1);
-                } catch (SQLException ex) {
-                    Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                
                
        showMessageDialog(null,"Usuario Agregado");
        txtNombre.setText("null");
@@ -529,40 +532,20 @@ public class MainView_Administrador extends javax.swing.JFrame {
 
     //Listar Usuarios en tabla
     
-    public void listarUsuarios()
-    {
-        String sql="SELECT * FROM usuarios";
-        String sql1="SELECT * FROM  persona";
-        String sql2="SELECT * FROM  area";
-        try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            String conecctionUrl = "jdbc:sqlserver://localhost:1433;databaseName=BD_INAH";
-            Connection cn = DriverManager.getConnection(conecctionUrl, "sa", "123");
-            Statement sentencia = cn.createStatement();
-            ResultSet rs = sentencia.executeQuery(sql);
-            ResultSet rs2 = sentencia.executeQuery(sql1);
-            ResultSet rs3 = sentencia.executeQuery(sql2);
-            DefaultTableModel m1=(DefaultTableModel)tblUsuarios.getModel();
-            m1.setRowCount(0);
-            while (rs2.next()) {
-                Object []fila={rs.getString(2),rs.getString(3),rs3.getString(5), rs2.getString(2), rs2.getString(3), rs.getString(4)};
-                m1.addRow(fila);
-                
-            }
-        }catch (ClassNotFoundException e)
-        {
-            e.printStackTrace();
-        }
-        catch (SQLException e)
-        {
-            e.printStackTrace();
-        }
+    public  void listarUsuarios() throws SQLException, ClassNotFoundException
+    {  
+
+        
     }
     
     
     private void btnCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarMouseClicked
       
     }//GEN-LAST:event_btnCancelarMouseClicked
+
+    private void ItemTipoUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemTipoUActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ItemTipoUActionPerformed
 
     /**
      * @param args the command line arguments
@@ -594,9 +577,12 @@ public class MainView_Administrador extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
             public void run() {
-                new MainView_Administrador().setVisible(true);
+                try {
+                    new MainView_Administrador().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(MainView_Administrador.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
