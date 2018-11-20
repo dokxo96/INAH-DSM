@@ -171,6 +171,7 @@ BD bd= new BD();
         String pass = PassTxt.getText();
         String Estado;
 <<<<<<< HEAD
+<<<<<<< HEAD
         u.setNombre(UserTxt.getText());
         
         bd.entrar(UserTxt.getText(),PassTxt.getText());
@@ -179,6 +180,8 @@ BD bd= new BD();
         Logger.getLogger(LoginView.class.getName()).log(Level.SEVERE, null, ex);
     }
 =======
+=======
+>>>>>>> parent of ff18632... LOGIN
         if(user.equals("") || pass.equals("")){
             showMessageDialog(null,"El Nombre de Usuario o Contraseña son INCORRECTOS");
             PassTxt.setText("");
@@ -192,6 +195,9 @@ BD bd= new BD();
             this.dispose();
         }
         // TODO add your handling code here:
+<<<<<<< HEAD
+>>>>>>> parent of ff18632... LOGIN
+=======
 >>>>>>> parent of ff18632... LOGIN
     }//GEN-LAST:event_jButton1ActionPerformed
 
