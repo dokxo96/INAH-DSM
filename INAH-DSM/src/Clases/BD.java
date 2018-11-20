@@ -108,7 +108,11 @@ public void actualizar(String consulta) throws Exception{
         cerrar();
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 public boolean entrar(String usuario,String contrasena) throws Exception{
+=======
+/*public boolean entrar(String usuario,String contrasena) throws Exception{
+>>>>>>> parent of ff18632... LOGIN
 =======
 /*public boolean entrar(String usuario,String contrasena) throws Exception{
 >>>>>>> parent of ff18632... LOGIN
@@ -124,11 +128,16 @@ public boolean entrar(String usuario,String contrasena) throws Exception{
                 if (resultados != null) {
                     while (resultados.next()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         user = resultados.getString("NOMBRE_USUARIO");
                         pass = resultados.getString("CONTRASENA");
                             System.out.println(user+" "+pass);
 
 
+=======
+                        user = resultados.getString("nombre_usuario");
+                        pass = resultados.getString("contrasena");
+>>>>>>> parent of ff18632... LOGIN
 =======
                         user = resultados.getString("nombre_usuario");
                         pass = resultados.getString("contrasena");
@@ -140,6 +149,7 @@ public boolean entrar(String usuario,String contrasena) throws Exception{
                             
                             switch(tipo){
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             case "A": new inah.dsm.MainView_Administrador().setVisible(true);
             break;
@@ -148,6 +158,14 @@ public boolean entrar(String usuario,String contrasena) throws Exception{
             case "ADMINISTRADOR": new Ventanas.Gerente.VP_Administrador().setVisible(true);
             break;
             case "CAJERO": new Ventanas.Cajero.M_P_Cajero().setVisible(true);
+=======
+            case "ADMINISTRADOR": new Ventanas.Gerente.VP_Administrador().setVisible(true);
+            break;
+            case "CAJERO": new Ventanas.Cajero.M_P_Cajero().setVisible(true);
+            break;
+            case "MESERO": A.setIDMesero(resultados.getInt(1));
+                new Ventanas.Mesero.M_P_Mesero().setVisible(true);
+>>>>>>> parent of ff18632... LOGIN
             break;
             case "MESERO": A.setIDMesero(resultados.getInt(1));
                 new Ventanas.Mesero.M_P_Mesero().setVisible(true);
@@ -185,10 +203,14 @@ public boolean entrar(String usuario,String contrasena) throws Exception{
        comando.close();
         return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
    
     }
 
+=======
+    }*/
+>>>>>>> parent of ff18632... LOGIN
 =======
     }*/
 >>>>>>> parent of ff18632... LOGIN
