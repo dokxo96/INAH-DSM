@@ -107,7 +107,7 @@ public void actualizar(String consulta) throws Exception{
         }        
         cerrar();
 }
-/*public boolean entrar(String usuario,String contrasena) throws Exception{
+public boolean entrar(String usuario,String contrasena) throws Exception{
     //M.ValidarNombre(txtUsuario.getText());    
     //M.validarContra(txtContra.getText());
     String user ="";
@@ -119,77 +119,24 @@ public void actualizar(String consulta) throws Exception{
              select("SELECT * FROM usuarios");
                 if (resultados != null) {
                     while (resultados.next()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                         user = resultados.getString("NOMBRE_USUARIO");
                         pass = resultados.getString("CONTRASENA");
                             System.out.println(user+" "+pass);
-=======
-                        user = resultados.getString("nombre_usuario");
-                        pass = resultados.getString("contrasena");
->>>>>>> parent of ff18632... LOGIN
-=======
-                        user = resultados.getString("nombre_usuario");
-                        pass = resultados.getString("contrasena");
->>>>>>> parent of ff18632... LOGIN
-=======
-                        user = resultados.getString("nombre_usuario");
-                        pass = resultados.getString("contrasena");
->>>>>>> parent of ff18632... LOGIN
-=======
-                        user = resultados.getString("nombre_usuario");
-                        pass = resultados.getString("contrasena");
->>>>>>> parent of ff18632... LOGIN
+
+
                         if(usuario.equals(user)&&contrasena.equals(pass)){
                             System.out.println("usuario correcto");
                             tipo=resultados.getString("tipo");
                             System.out.println(tipo);
                             
                             switch(tipo){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             case "A": new inah.dsm.MainView_Administrador().setVisible(true);
             break;
             case "O": new inah.dsm.MainView_operador().setVisible(true);
             break;
             case "D": new inah.dsm.MainView_Delegado().setVisible(true);
-=======
-            case "ADMINISTRADOR": new Ventanas.Gerente.VP_Administrador().setVisible(true);
-            break;
-            case "CAJERO": new Ventanas.Cajero.M_P_Cajero().setVisible(true);
-            break;
-            case "MESERO": A.setIDMesero(resultados.getInt(1));
-                new Ventanas.Mesero.M_P_Mesero().setVisible(true);
->>>>>>> parent of ff18632... LOGIN
-=======
-            case "ADMINISTRADOR": new Ventanas.Gerente.VP_Administrador().setVisible(true);
-            break;
-            case "CAJERO": new Ventanas.Cajero.M_P_Cajero().setVisible(true);
-            break;
-            case "MESERO": A.setIDMesero(resultados.getInt(1));
-                new Ventanas.Mesero.M_P_Mesero().setVisible(true);
->>>>>>> parent of ff18632... LOGIN
-=======
-            case "ADMINISTRADOR": new Ventanas.Gerente.VP_Administrador().setVisible(true);
-            break;
-            case "CAJERO": new Ventanas.Cajero.M_P_Cajero().setVisible(true);
-            break;
-            case "MESERO": A.setIDMesero(resultados.getInt(1));
-                new Ventanas.Mesero.M_P_Mesero().setVisible(true);
->>>>>>> parent of ff18632... LOGIN
-=======
-            case "ADMINISTRADOR": new Ventanas.Gerente.VP_Administrador().setVisible(true);
-            break;
-            case "CAJERO": new Ventanas.Cajero.M_P_Cajero().setVisible(true);
-            break;
-            case "MESERO": A.setIDMesero(resultados.getInt(1));
-                new Ventanas.Mesero.M_P_Mesero().setVisible(true);
->>>>>>> parent of ff18632... LOGIN
-            break;
+
                             }//switch
                             return true;
 
@@ -219,24 +166,10 @@ public void actualizar(String consulta) throws Exception{
         }
        comando.close();
         return false;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
    
     }
-=======
-    }*/
->>>>>>> parent of ff18632... LOGIN
-=======
-    }*/
->>>>>>> parent of ff18632... LOGIN
-=======
-    }*/
->>>>>>> parent of ff18632... LOGIN
-=======
-    }*/
->>>>>>> parent of ff18632... LOGIN
+
 public void cerrar() throws SQLException{
         try {
             showMessageDialog(null,"METODO CERRR");
