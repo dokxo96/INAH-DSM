@@ -121,9 +121,14 @@ public void actualizar(String consulta) throws Exception{
                     while (resultados.next()) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         user = resultados.getString("NOMBRE_USUARIO");
                         pass = resultados.getString("CONTRASENA");
                             System.out.println(user+" "+pass);
+=======
+                        user = resultados.getString("nombre_usuario");
+                        pass = resultados.getString("contrasena");
+>>>>>>> parent of ff18632... LOGIN
 =======
                         user = resultados.getString("nombre_usuario");
                         pass = resultados.getString("contrasena");
@@ -140,11 +145,20 @@ public void actualizar(String consulta) throws Exception{
                             switch(tipo){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             case "A": new inah.dsm.MainView_Administrador().setVisible(true);
             break;
             case "O": new inah.dsm.MainView_operador().setVisible(true);
             break;
             case "D": new inah.dsm.MainView_Delegado().setVisible(true);
+=======
+            case "ADMINISTRADOR": new Ventanas.Gerente.VP_Administrador().setVisible(true);
+            break;
+            case "CAJERO": new Ventanas.Cajero.M_P_Cajero().setVisible(true);
+            break;
+            case "MESERO": A.setIDMesero(resultados.getInt(1));
+                new Ventanas.Mesero.M_P_Mesero().setVisible(true);
+>>>>>>> parent of ff18632... LOGIN
 =======
             case "ADMINISTRADOR": new Ventanas.Gerente.VP_Administrador().setVisible(true);
             break;
@@ -193,8 +207,12 @@ public void actualizar(String consulta) throws Exception{
         return false;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    
     }
+=======
+    }*/
+>>>>>>> parent of ff18632... LOGIN
 =======
     }*/
 >>>>>>> parent of ff18632... LOGIN

@@ -172,6 +172,7 @@ BD bd= new BD();
         String Estado;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         u.setNombre(UserTxt.getText());
         
         bd.entrar(UserTxt.getText(),PassTxt.getText());
@@ -180,6 +181,8 @@ BD bd= new BD();
         Logger.getLogger(LoginView.class.getName()).log(Level.SEVERE, null, ex);
     }
 =======
+=======
+>>>>>>> parent of ff18632... LOGIN
 =======
 >>>>>>> parent of ff18632... LOGIN
         if(user.equals("") || pass.equals("")){
@@ -196,6 +199,9 @@ BD bd= new BD();
         }
         // TODO add your handling code here:
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of ff18632... LOGIN
+=======
 >>>>>>> parent of ff18632... LOGIN
 =======
 >>>>>>> parent of ff18632... LOGIN
