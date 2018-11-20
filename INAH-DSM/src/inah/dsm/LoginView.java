@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package inah.dsm;
-
+import Clases.BD;
 import static javax.swing.JOptionPane.showMessageDialog;
 
 /**
@@ -12,7 +12,7 @@ import static javax.swing.JOptionPane.showMessageDialog;
  * @author dokxo
  */
 public class LoginView extends javax.swing.JFrame {
-
+BD bd= new BD();
     /**
      * Creates new form LoginView
      */
@@ -20,6 +20,7 @@ public class LoginView extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         UserTxt.requestFocus();
+        bd.iniciarConexion();
     }
 
     /**

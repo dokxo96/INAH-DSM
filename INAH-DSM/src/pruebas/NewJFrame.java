@@ -5,15 +5,20 @@
  */
 package pruebas;
 import Conexión_sql.conexión;
+import Clases.BD;
+import java.sql.ResultSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author carch
  */
 public class NewJFrame extends javax.swing.JFrame {
-
+BD bd = new BD();
     /**
      * Creates new form NewJFrame
      */
+protected ResultSet rs;
     public NewJFrame() {
         initComponents();
     }
@@ -59,7 +64,17 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    conexión c= new conexión("BD_INAH");
+    try {
+        bd.iniciarConexion();
+        
+        rs = bd.select("SELECT * FROM USUARIOS;");
+        while (rs.next())
+        {
+            System.out.println(rs.getString(1)+" "+rs.getString(2));
+        }
+    } catch (Exception ex) {
+        Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
