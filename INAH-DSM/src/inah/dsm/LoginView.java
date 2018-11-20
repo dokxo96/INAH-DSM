@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package inah.dsm;
-import Clases.BD;
+import Clases.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import static javax.swing.JOptionPane.showMessageDialog;
 
 /**
@@ -13,6 +15,7 @@ import static javax.swing.JOptionPane.showMessageDialog;
  */
 public class LoginView extends javax.swing.JFrame {
 BD bd= new BD();
+Usuario u = new Usuario();
     /**
      * Creates new form LoginView
      */
@@ -167,22 +170,13 @@ BD bd= new BD();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String user = UserTxt.getText();
-        String pass = PassTxt.getText();
+    try {
         String Estado;
-        if(user.equals("") || pass.equals("")){
-            showMessageDialog(null,"El Nombre de Usuario o Contraseña son INCORRECTOS");
-            PassTxt.setText("");
-            UserTxt.setText("");
-            
-        }
-        else
-        {
-            MainView_Administrador mv = new MainView_Administrador();
-            mv.setVisible(true);
-            this.dispose();
-        }
-        // TODO add your handling code here:
+        u.setNombre(UserTxt.getText());
+        bd.entrar(UserTxt.getText(),PassTxt.getText());
+    } catch (Exception ex) {
+        Logger.getLogger(LoginView.class.getName()).log(Level.SEVERE, null, ex);
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void UserTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserTxtActionPerformed

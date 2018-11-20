@@ -6,7 +6,7 @@ package Clases;
  */
 //import Datos.Acciones;
 //import Ventanas_Generales.Login;
-//import Datos.Usuario;
+import Clases.Usuario;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -23,7 +23,7 @@ import static javax.swing.JOptionPane.showMessageDialog;
  */
 public class BD {
 //Acciones A = new Acciones();
-//Usuario u = new Usuario();
+Usuario u = new Usuario();
 private Connection conexion = null;
 private Statement comando = null;    
 private ResultSet resultados = null;
@@ -107,7 +107,8 @@ public void actualizar(String consulta) throws Exception{
         }        
         cerrar();
 }
-/*public boolean entrar(String usuario,String contrasena) throws Exception{
+public boolean entrar(String usuario,String contrasena) throws Exception{
+    iniciarConexion();
     //M.ValidarNombre(txtUsuario.getText());    
     //M.validarContra(txtContra.getText());
     String user ="";
@@ -116,22 +117,21 @@ public void actualizar(String consulta) throws Exception{
        try {
            System.out.println(u.getNombre());
              if(!u.getNombre().equals("")){
-             select("SELECT * FROM usuarios");
+             select("SELECT * FROM PERSONA");
                 if (resultados != null) {
                     while (resultados.next()) {
-                        user = resultados.getString("nombre_usuario");
-                        pass = resultados.getString("contrasena");
+                        user = resultados.getString("NOMBRE_USUARIO");
+                        pass = resultados.getString("CONTRASENA");
                         if(usuario.equals(user)&&contrasena.equals(pass)){
                             System.out.println("usuario correcto");
-                            tipo=resultados.getString("tipo");
+                            tipo=resultados.getString("TIPO_PERSONA");
                             System.out.println(tipo);
                             switch(tipo){
-            case "ADMINISTRADOR": new Ventanas.Gerente.VP_Administrador().setVisible(true);
+            case "ADMINISTRADOR": new inah.dsm.MainView_Administrador().setVisible(true);
             break;
-            case "CAJERO": new Ventanas.Cajero.M_P_Cajero().setVisible(true);
+            case "OPERADOR": new inah.dsm.MainView_operador().setVisible(true);
             break;
-            case "MESERO": A.setIDMesero(resultados.getInt(1));
-                new Ventanas.Mesero.M_P_Mesero().setVisible(true);
+            case "DELEGADO": new inah.dsm.MainView_Delegado().setVisible(true);
             break;
                             }//switch
                             return true;
@@ -156,7 +156,7 @@ public void actualizar(String consulta) throws Exception{
         }
        comando.close();
         return false;
-    }*/
+    }
 public void cerrar() throws SQLException{
         try {
             conexion.close();
