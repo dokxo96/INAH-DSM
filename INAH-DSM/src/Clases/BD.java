@@ -6,7 +6,7 @@ package Clases;
  */
 //import Datos.Acciones;
 //import Ventanas_Generales.Login;
-import Clases.Usuario;
+//import Datos.Usuario;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -23,7 +23,7 @@ import static javax.swing.JOptionPane.showMessageDialog;
  */
 public class BD {
 //Acciones A = new Acciones();
-Usuario u = new Usuario();
+//Usuario u = new Usuario();
 private Connection conexion = null;
 private Statement comando = null;    
 private ResultSet resultados = null;
@@ -107,8 +107,7 @@ public void actualizar(String consulta) throws Exception{
         }        
         cerrar();
 }
-public boolean entrar(String usuario,String contrasena) throws Exception{
-    iniciarConexion();
+/*public boolean entrar(String usuario,String contrasena) throws Exception{
     //M.ValidarNombre(txtUsuario.getText());    
     //M.validarContra(txtContra.getText());
     String user ="";
@@ -117,23 +116,37 @@ public boolean entrar(String usuario,String contrasena) throws Exception{
        try {
            System.out.println(u.getNombre());
              if(!u.getNombre().equals("")){
-             select("SELECT * FROM PERSONA");
+             select("SELECT * FROM usuarios");
                 if (resultados != null) {
                     while (resultados.next()) {
+<<<<<<< HEAD
                         user = resultados.getString("NOMBRE_USUARIO");
                         pass = resultados.getString("CONTRASENA");
                             System.out.println(user+" "+pass);
+=======
+                        user = resultados.getString("nombre_usuario");
+                        pass = resultados.getString("contrasena");
+>>>>>>> parent of ff18632... LOGIN
                         if(usuario.equals(user)&&contrasena.equals(pass)){
                             System.out.println("usuario correcto");
-                            tipo=resultados.getString("TIPO_PERSONA");
+                            tipo=resultados.getString("tipo");
                             System.out.println(tipo);
                             
                             switch(tipo){
+<<<<<<< HEAD
             case "A": new inah.dsm.MainView_Administrador().setVisible(true);
             break;
             case "O": new inah.dsm.MainView_operador().setVisible(true);
             break;
             case "D": new inah.dsm.MainView_Delegado().setVisible(true);
+=======
+            case "ADMINISTRADOR": new Ventanas.Gerente.VP_Administrador().setVisible(true);
+            break;
+            case "CAJERO": new Ventanas.Cajero.M_P_Cajero().setVisible(true);
+            break;
+            case "MESERO": A.setIDMesero(resultados.getInt(1));
+                new Ventanas.Mesero.M_P_Mesero().setVisible(true);
+>>>>>>> parent of ff18632... LOGIN
             break;
                             }//switch
                             return true;
@@ -164,8 +177,12 @@ public boolean entrar(String usuario,String contrasena) throws Exception{
         }
        comando.close();
         return false;
+<<<<<<< HEAD
    
     }
+=======
+    }*/
+>>>>>>> parent of ff18632... LOGIN
 public void cerrar() throws SQLException{
         try {
             showMessageDialog(null,"METODO CERRR");
